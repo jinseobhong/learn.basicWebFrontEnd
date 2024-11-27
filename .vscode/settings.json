@@ -1,0 +1,21 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "eslint.validate": [
+    "javascript",
+    "css",
+    "html",
+    "markdown"
+  ],
+  "eslint.enable": true,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "emmet.showAbbreviationSuggestions": true,
+  "emmet.syntaxProfiles": {
+    "html": {
+      "tag_case": "lower",
+      "profile": "html5"
+    }
+  }
+}
