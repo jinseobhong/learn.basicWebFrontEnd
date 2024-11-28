@@ -11,7 +11,7 @@
     <!-- 반응형 디자인, 초기 규모 정보 지정 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- 페이지 제목 -->
-    <title>Document</title>
+    <title>Index</title>
     <!--
         자바스크립트, CSS 등 외부 파일을 불러오는 태그를 입력하세요.
         <link>
@@ -20,54 +20,25 @@
     -->
   </head>
   <!-- 실제 브라우저에 표시되는 내용 -->
-  <body>
     <!-- vs code short cut :  ctrl + d → rename short cut
                               ctrl + x → delete one line
                               shift + alt + ↑ or ↓ → copy one line
     -->
-    <!-- <a> 다른 URL로 연결할 수 있는 하이퍼링크를 생성하는 태그 -->
-    <!-- target 속성  -->
-    <!-- _black 새 프레임 -->
-    <!-- _self 현재 프레임에 그대로, 링크 된 웹페이지를 엽니다. -->
-    <!-- _parent 현재 프레임의 부모 프레임에서 새웹페이지가 열립니다. -->
-    <!-- _top 최상위 프레임에서 열립니다. -->
-    <a href="https://www.naver.com" target="_top">네이버</a>
-    <!--
-      * Directory 경로
-        HTML 파일에서 경로는 파일 시스템 내의 위치를 지칭
-        웹 페이지에서 다른 파일이나 리소스를 참조하는 데 사용
-          - 상대 경로(Relative Path)
-            ./ : 현재 디렉토리
-            ../ : 상위 디렉토리
-          - 절대 경로(Absolute Path)
-    -->
-    <br />
-    <!-- 절대 경로 -->
-    <a href="D:\Workspace\Projects\learn.html5\kr\HTML\0.route\route.html">0.route\route.html의 절대 경로</a>
-    <br />
-    <!-- 상대 경로 -->
-    <a href="./0.route/route.html">0.route\route.html의 상대 경로</a>
-    <!-- <h1~6> HTML 구획 제목 요소 태그(Headline) -->
-    <h1>HTML 5</h1>
-    <h2>HTML 5</h2>
-    <h3>HTML 5</h3>
-    <h4>HTML 5</h4>
-    <h5>HTML 5</h5>
-    <h6>HTML 5</h6>
-    <!-- <p> 문단 태그 -->
-    <p>
-      paragraph
-      <!-- <strong> 텍스트 강조 태그 -->
-      <strong>Lorem</strong>
-      ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-      aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat.
-      <!-- <span> 구문 콘텐츠를 위한 통용 인라인 컨테이너 태그 -->
-      <span>
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-        sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </span>
-    </p>
-    Hellow world!
+    <ul>
+      <li><a href="./index.html">Index</a></li>
+      <li><a href="./0.route/route.html">경로</a>
+        <ul>
+          <li><a href="./0.route/sameRoute.html">sameRoute.html</a>
+          <li><a href="./0.route/sub/subRoute.html">subRoute.html</a>
+        </ul>
+      <li>
+      <li><a href="./1.image/image.html">이미지</a></li>
+      <li><a href="./2.text/text.html">문단, 텍스트 서식</a>
+        <ul>
+          <li><a href="./2.text/list.html">리스트</a>
+        </ul>
+      </li>
+      <li><a href="./3.table/table.html">표(테이블)</a></li>
+    </ul>
   </body>
 </html>

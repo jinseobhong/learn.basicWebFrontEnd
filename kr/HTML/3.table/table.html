@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table</title>
+    <style>
+      table {
+        width: 100%;
+        height: 300px;
+      }
+      table,
+      td,
+      th {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      th {
+        background-color: beige;
+      }
+      td {
+        height : 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Table Tag</h1>
+    <p>Emmet : table>caption+tr>td*3^tr>td*3^tr>td*3</p>
+    <table>
+      <!-- <caption> : 표에 대한 설명하는 태그 -->
+      <caption>표의 제목</caption>
+      <!-- <tr> : 표의 행을 만드는 태그 -->
+      <tr>
+        <!-- <th> : Table Header -->
+        <th>컬럼 1</th>
+        <th>컬럼 2</td>
+        <th>컬럼 3</th>
+      </tr>
+      <tr>
+        <!-- <td> : Table Data -->
+        <td>표의 셀</td>
+        <td>표의 셀</td>
+        <td>표의 셀</td>
+      </tr>
+      <tr>
+        <!-- <td> : Table Data -->
+        <td>표의 셀</td>
+        <td>표의 셀</td>
+        <td>표의 셀</td>
+      </tr>
+    </table>
+    <p>Emmet : table>caption+tr>th*4^tr>td*4^tr>td*4</p>
+    <table>
+      <caption>전화번호부</caption>
+      <tr>
+        <!-- colspan 속성 : 열을 병합 -->
+        <th colspan="2">이름</th>
+        <th>나이</th>
+        <th>전화번호</th>
+      </tr>
+      <tr>
+        <!-- rowspan 속성 : 행을 병합 -->
+        <td rowspan="2">홍</td>
+        <td rowspan="2">길동</td>
+        <td rowspan="2">30</td>
+        <td>010-1111-1111</td>
+      </tr>
+      <tr>
+        <td>010-2222-2222</td>
+      </tr>
+    </table>
+    <p>Emmet : table>caption+tr>th*3^tr>td*3^tr>td*3^tr>td*3</p>
+    <h1 style="text-align: center;">Modern Browser</h1>
+    <table>
+      <caption>국내에서 자주 사용하는 모던 브라우저</caption>
+      <tr>
+        <th>브라우저</th>
+        <th>제조업체</th>
+        <th >다운로드</th>
+      </tr>
+      <tr>
+        <td>크롬</td>
+        <td>Google</td>
+        <td>https://www.google.com/chrome</td>
+      </tr>
+      <tr>
+        <td>파이어폭스</td>
+        <td>Mozila</td>
+        <td>https://www.mozila.org/ko/firefox</td>
+      </tr>
+      <tr>
+        <td>엣지</td>
+        <td>Microsoft</td>
+        <td>https://www.microsoft.com</td>
+      </tr>
+    </table>
+  </body>
+</html>

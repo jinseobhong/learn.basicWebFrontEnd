@@ -5,20 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>route</title>
   </head>
+  <body>
     <h1>route</h1>
+    <!-- <a> 다른 URL로 연결할 수 있는 하이퍼링크를 생성하는 태그 -->
+    <!-- target 속성  -->
+    <!-- _blank 새 프레임 -->
+    <!-- _self 현재 프레임에 그대로, 링크 된 웹페이지를 엽니다. -->
+    <!-- _parent 현재 프레임의 부모 프레임에서 새웹페이지가 열립니다. -->
+    <!-- _top 최상위 프레임에서 열립니다. -->
+    <!-- <a href="https://www.naver.com" target="_blank">네이버</a> -->
+    <!--
+      * Directory 경로
+        HTML 파일에서 경로는 파일 시스템 내의 위치를 지칭
+        웹 페이지에서 다른 파일이나 리소스를 참조하는 데 사용
+          - 상대 경로(Relative Path)
+            ./ : 현재 디렉토리
+            ../ : 상위 디렉토리
+          - 절대 경로(Absolute Path)
+    -->
+    <br />
     <!-- 절대 경로 -->
     <a href="D:\Workspace\Projects\learn.html5\kr\HTML\index.html">index.html의 절대 경로</a>
     <br />
     <!-- 상대 경로 -->
     <a href="../index.html">index.html의 상대 경로</a>
     <!-- 1. 동일한 폴더 내의 파일 참조 -->
-    <br/>
+    <br />
     <a href="./sameRoute.html">./sameRoute.html</a>
     <!-- 2. 하위 폴더 내의 파일 참조 -->
-    <br/>
+    <br />
     <a href="./sub/subRoute.html">./sub/subRoute.html</a>
     <!-- 3. 상위 폴더 내의 파일 참조 -->
-    <br/>
+    <br />
     <a href="../index.html">../index.html</a>
   </body>
 </html>
