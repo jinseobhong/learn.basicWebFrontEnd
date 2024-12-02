@@ -15,6 +15,16 @@
     <!-- _top 최상위 프레임에서 열립니다. -->
     <!-- <a href="https://www.naver.com" target="_blank">네이버</a> -->
     <!--
+      * 웹 경로
+                        protocol host           port  path  pathString
+        HTTPS 프로토콜 : https:// www.domain.com:8080 /login?name=value?
+        url
+          origin : protocol + host + port
+          protocol : http, https, TLS...
+          host : 웹 사이트 도메인(IP 주소를 보기 쉽게 도메인 이름으로 변경)
+          port : 포트 번호
+          path : 서버 측 내부 디렉토리 경로
+          query string : 요청의 key와 value
       * Directory 경로
         HTML 파일에서 경로는 파일 시스템 내의 위치를 지칭
         웹 페이지에서 다른 파일이나 리소스를 참조하는 데 사용

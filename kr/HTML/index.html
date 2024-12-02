@@ -2,43 +2,53 @@
 <!-- vs code short cut : ctrl + / → comments short cut -->
 <!-- HTML 주석 -->
 <!-- HTML 문서의 형식을 알려주는 부분 -->
-<html lang="ko">
-  <!-- HTML 문서에 대한 정보를 브라우저에 제공하는 태그 -->
-  <head>
-    <!-- HTML 문서에 대한 메타데이터를 정의하는 데 사용됩니다. -->
-    <!-- 문자 인코딩 설정 -->
-    <meta charset="UTF-8" />
-    <!-- 반응형 디자인, 초기 규모 정보 지정 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- 페이지 제목 -->
-    <title>Index</title>
-    <!--
+<htm lang="ko">
+  <html>
+    <!-- HTML 문서에 대한 정보를 브라우저에 제공하는 태그 -->
+    <head>
+      <!-- HTML 문서에 대한 메타데이터를 정의하는 데 사용됩니다. -->
+      <!-- 문자 인코딩 설정 -->
+      <meta charset="UTF-8" />
+      <!-- 반응형 디자인, 초기 규모 정보 지정 -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!-- 페이지 제목 -->
+      <title>Index</title>
+      <!--
         자바스크립트, CSS 등 외부 파일을 불러오는 태그를 입력하세요.
         <link>
         <style></style>
         <script></script>
-    -->
-  </head>
-  <!-- 실제 브라우저에 표시되는 내용 -->
-    <!-- vs code short cut :  ctrl + d → rename short cut
+    --></head>
+    <body>
+      <!-- 실제 브라우저에 표시되는 내용 -->
+      <!-- vs code short cut :  ctrl + d → rename short cut
                               ctrl + x → delete one line
                               shift + alt + ↑ or ↓ → copy one line
     -->
-    <ul>
-      <li><a href="./index.html">Index</a></li>
-      <li><a href="./0.route/route.html">경로</a>
-        <ul>
-          <li><a href="./0.route/sameRoute.html">sameRoute.html</a>
-          <li><a href="./0.route/sub/subRoute.html">subRoute.html</a>
-        </ul>
-      <li>
-      <li><a href="./1.image/image.html">이미지</a></li>
-      <li><a href="./2.text/text.html">문단, 텍스트 서식</a>
-        <ul>
-          <li><a href="./2.text/list.html">리스트</a>
-        </ul>
-      </li>
-      <li><a href="./3.table/table.html">표(테이블)</a></li>
-    </ul>
-  </body>
-</html>
+      <ul>
+        <li><a href="./index.html">Index</a></li>
+        <li>
+          <a href="./0.route/route.html">경로</a>
+          <ul>
+            <li><a href="./0.route/sameRoute.html">sameRoute.html</a></li>
+            <li><a href="./0.route/sub/subRoute.html">subRoute.html</a></li>
+          </ul>
+        </li>
+        <li><a href="./1.image/image.html">이미지</a></li>
+        <li>
+          <a href="./2.text/text.html">문단, 텍스트 서식</a>
+          <ul>
+            <li><a href="./2.text/list.html">리스트</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="./3.table/table.html">표(테이블)</a>
+          <ul>
+            <li><a href="./3.table/table2.html">표(테이블) 2</a></li>
+          </ul>
+        </li>
+        <li><a href="./4.form/form.html">폼(Form)</a></li>
+      </ul>
+    </body>
+  </html>
+</htm>
