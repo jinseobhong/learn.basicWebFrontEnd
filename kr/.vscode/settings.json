@@ -13,8 +13,8 @@
       "profile": "html5"
     }
   },
-  "editor.tabSize": 2, // 기본 들여쓰기 크기 (스페이스 개수)
-  "editor.insertSpaces": false, // true: 스페이스 사용, false: 탭 사용
+  "editor.tabSize": 2, // 기본 들여쓰기 크기 (공백의 갯수)
+  "editor.insertSpaces": false, // true: Use Space , false: Use Tap
   "[html]": {
     "editor.tabSize": 2 // HTML 파일은 2칸 들여쓰기
   },

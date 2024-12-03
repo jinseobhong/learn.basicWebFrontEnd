@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semantics</title>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      table,
+      td,
+      th {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- header+main+footer -->
+    <header>
+      <h1>내 블로그</h1>
+      <!-- nav>ul>(li>a)*3 -->
+      <nav>
+        <ul>
+          <!-- # 해당 id로 연결(Binding) -->
+          <li><a href="#index">Index</a></li>
+          <li><a href="#about">소개</a></li>
+          <li><a href="#contact">연락처</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- section>h2+article>h3+p -->
+      <!-- <section> -->
+      <section>
+        <h2>최신 게시물</h2>
+        <article>
+          <h3>첫 번째 게시물</h3>
+          <p>이 글은 시멘틱 태그를 활용한 예제 입니다.</p>
+        </article>
+      </section>
+      <!-- aside>h3+ul>(li>a)*2 -->
+      <!-- <aside> 사이드 컨텐츠 -->
+      <aside>
+        <!-- 특수 문자 입력 -->
+        <!-- &____; 특수 문자를 입력 -->
+        <!-- &nbsp; 공백 -->
+        <!-- &quot; 특수 기호(") -->
+        <h3>관련&nbsp;링크</h3>
+        <ul>
+          <li><a href="">추천 글 1</a></li>
+          <li><a href="">추천 글 2</a></li>
+        </ul>
+      </aside>
+      <hr />
+      <section id="contact">
+        <table>
+          <caption>연락처</caption>
+          <tr>
+            <!-- colspan 속성 : 열을 병합 -->
+            <th colspan="2">이름</th>
+            <th>나이</th>
+            <th>전화번호</th>
+          </tr>
+          <tr>
+            <!-- rowspan 속성 : 행을 병합 -->
+            <td rowspan="2">홍</td>
+            <td rowspan="2">이현</td>
+            <td rowspan="2">34</td>
+            <td>010-7591-2886</td>
+          </tr>
+        </table>
+      </section>
+      <input type="button" value="Index로" onclick="location.href='../index.html'" />
+    </main>
+    <footer>
+      <!-- &copy; 특수 기호(Copyright) -->
+      <p>&copy; 2024 내 블로그, 모든 권리 보유</p>
+    </footer>
+  </body>
+</html>

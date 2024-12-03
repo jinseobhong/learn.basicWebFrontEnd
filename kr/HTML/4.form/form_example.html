@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Example</title>
+  </head>
+  <body>
+    <!-- form -->
+    <form action="../index.html" method="GET">
+      <!-- fieldset>legend+(label+input)*2 -->
+      <fieldset style="display: inline-block">
+        <legend>회원 정보</legend>
+        <label for="input-id">ID</label>
+        <br />
+        <input type="text" name="user-id" id="input-id" value="Hong" />
+        <br />
+        <label for="input-password">Password</label>
+        <br />
+        <input type="password" name="user-password" id="input-password" />
+        <br />
+      </fieldset>
+      <!-- fieldset  -->
+      <fieldset>
+        <!-- legend+(label+input:checkbox)*3 -->
+        <legend>과목</legend>
+        <label for="subject-option-html">HTML</label>
+        <input type="checkbox" name="subject" id="subject-option-html" value="html" />
+        <label for="subject-option-css">CSS</label>
+        <input type="checkbox" name="subject" id="subject-option-css" value="css" checked />
+        <label for="subject-option-js">JS</label>
+        <input type="checkbox" name="subject" id="subject-option-js" value="js" />
+        <br />
+        <br />
+        <!-- label+input:radio*3 -->
+        <label for="grade-option-high">상</label>
+        <input type="radio" name="grade" id="grade-option-high" value="high" />
+        <label for="grade-option-medium">중</label>
+        <input type="radio" name="grade" id="grade-option-medium" value="medium" />
+        <label for="grade-option-low">하</label>
+        <input type="radio" name="grade" id="grade-option-low" value="low" />
+      </fieldset>
+      <input type="submit" value="submit" />
+      <input type="reset" value="reset" />
+    </form>
+  </body>
+</html>

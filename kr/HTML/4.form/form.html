@@ -83,23 +83,39 @@
         <input type="hidden" name="hidden-data" value="hidden data" />
         <br />
         체크박스 :
-        <input type="checkbox" name="checkbox" value="1" />
-        정보처리기사
-        <input type="checkbox" name="checkbox" value="2" />
-        SQL
-        <input type="checkbox" name="checkbox" value="3" />
-        AWS
+        <!-- <label> 폼 요소에 대한 설명을 제공하는 데, 사용 -->
+        <label for="check-option-1">
+          <!-- 속성의 id는 한 html 문서 내에서 유일해야 함 -->
+          <input type="checkbox" name="checkbox" id="check-option-1" value="1" />
+          정보처리기사
+        </label>
+        <label for="check-option-2">
+          <input type="checkbox" name="checkbox" id="check-option-2" value="2" />
+          SQL
+        </label>
+        <label for="check-option-3">
+          <input type="checkbox" name="checkbox" id="check-option-3" value="3" />
+          AWS
+        </label>
         <br />
         라디오 :
-        <input type="radio" name="radio" value="N1" />
-        N1
-        <input type="radio" name="radio" value="N2" />
-        N2
-        <input type="radio" name="radio" value="N3" />
-        N3
+        <label for="radio-option-1">
+          <input type="radio" name="radio" id="radio-option-1" value="N1" />
+          N1
+        </label>
+        <label for="radio-option-2">
+          <input type="radio" name="radio" id="radio-option-2" value="N2" />
+          N2
+        </label>
+        <label for="radio-option-3">
+          <input type="radio" name="radio" id="radio-option-3" value="N3" />
+          N3
+        </label>
         <!-- checked 속성은 체크 된 값을 의미 -->
-        <input type="radio" name="radio" value="none" checked />
-        없음
+        <label for="radio-option-4">
+          <input type="radio" name="radio" value="none" id="radio-option-4" checked />
+          없음
+        </label>
         <br />
         셀렉트 :
         <select name="select" id="">
@@ -123,6 +139,8 @@
         제출 :
         <!-- 폼의 입력 값의 전송 -->
         <input type="submit" value="submit" />
+        <!-- <button> 태그를 이용한 submit -->
+        <button type="submit">submit</button>
         <br />
         리셋 :
         <!-- 폼의 값을 초기화 -->
