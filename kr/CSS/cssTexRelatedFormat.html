@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Text Related Format</title>
+    <!-- 웹에 있는 폰트 참조 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Itim&family=Noto+Sans+KR:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet" />
+    <style>
+      /* 텍스트 관련 서식 종류
+			font-size : 텍스트의 크기
+			font-weight : 글자의 두깨 100~900, bold(700), bolder, lighter, normal(400)..
+      font-family : 글꼴 지정
+      font-style : 문자 스타일(normal, italic)
+      color : 글꼴의 색상을 지정
+      text-decoration : 텍스트의 줄 표시 혹은 제거
+      text-transform : 대소문자 변환
+      text-shadow : 텍스트 그림자 효과
+		*/
+      h1 {
+        font-size: 1em;
+        font-weight: bolder;
+      }
+      a {
+        color: black;
+        text-decoration: line-through;
+      }
+      p {
+        text-align: center;
+      }
+      p.copyright {
+        /* 첫 글자 대문자로 변환 */
+        text-transform: capitalize;
+        text-shadow: 1px 1px blue;
+      }
+      p#english {
+        font-family: sans-serif;
+      }
+      p#korean {
+        font-family: 굴림;
+      }
+      .noto-sans-kr-uniquifier {
+        font-family: 'Noto Sans KR', sans-serif;
+        font-optical-sizing: auto;
+        font-weight: bold;
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- font-size, font-weight -->
+    <h1>CSS 텍스트 서식 관련 속성</h1>
+    <!-- color, text-decoration -->
+    <a href="">네이버 바로가기</a>
+    <!-- text-align -->
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni laborum perspiciatis, id molestias at pariatur.
+      Odio harum excepturi provident, reiciendis voluptatum commodi consequuntur quis? Quod ad hic quos totam? Minus.
+    </p>
+    <!-- text-transform, text-shadow -->
+    <p class="copyright">&copy; 2024 copyright all Reserved by Hong Ihyeon</p>
+    <!-- font-family -->
+    <p id="english">English</p>
+    <p id="korean">Korean</p>
+    <p class="noto-sans-kr-uniquifier">웹 폰트 참조</p>
+  </body>
+</html>
