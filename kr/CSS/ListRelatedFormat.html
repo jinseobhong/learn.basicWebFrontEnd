@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>목록 관련 서식</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=close" />
+    <!-- 사용하고 싶은 아이콘이 있으면 위 link를 개수만큼 가져와야 함 -->
+    <!-- Favorite 이미지의 Copy Code -->
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          'FILL' 1,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 20;
+      }
+    </style>
+    <style>
+      /* 목록 스타일 속성 :
+				기호, 기호의 위치, 사용자 지정 이미지로 기호 넣기
+				- font.google.com에서 아이콘 다운받아 넣어보기 (svg파일 권장)
+					svg는 벡터형식의 파일, 선명함, 코드로 편집이 가능
+					png는 고정된 해상도와 크기, 투명한 배경,
+						크기 조정 시에는 품질 손상의 가능성이 있음
+		*/
+
+      ul {
+        /* list-style-type: square; */
+        /* list-style-image: url("../HTML/1. image/images/favorite_16dp_EA3323_FILL0_wght400_GRAD0_opsz20.svg"); */
+        list-style-type: none;
+        list-style-image: linear-gradient(to left bottom, red, blue);
+        /* linear 외에도 radial 등 다른 형태도 있음 */
+        list-style-position: inside;
+        /* inside : 들여쓰기, outside : 바뀌지 않음(디폴트 값) */
+      }
+
+      ol {
+        list-style-type: upper-roman;
+        list-style-position: inside;
+      }
+
+      /*
+			::before
+			::after
+			* 가상 요소(pseudo-element)
+				- 가상 요소는 실제 DOM(Document Object Model 문서 객체 모델. 1일차 HTML기초에 있는 문서 구조 분석탭의 형태라고 이해)구조에 영향을 주지 않고,
+					스타일링과 레이아웃을 조작
+				- 텍스트, 이미지, 속성을 삽입할 수 있음
+
+		*/
+      .menu li::before {
+        content: '👍';
+        /* 윈도우키 + .키 = 이모지 삽입가능*/
+      }
+      .menu li::after {
+        content: '리스트 각 요소에 일괄적으로 붙일 내용';
+        color: violet;
+        font-weight: 100;
+      }
+
+      a::after {
+        content: ' (' attr(href) ')';
+      }
+
+      .dead-link {
+        text-decoration: line-through;
+      }
+
+      .dead-link::after {
+        display: inline-block;
+        content: '❗❗';
+        width: 12px;
+        height: 12px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- h2+ul>li*3 -->
+    <h2>목록 스타일 예제</h2>
+    <ul>
+      <li>첫 번째 아이템</li>
+      <li>두 번째 아이템</li>
+      <li>세 번째 아이템</li>
+    </ul>
+    <ol>
+      <li>첫 번째 단계</li>
+      <li>두 번째 단계</li>
+      <li>세 번째 단계</li>
+    </ol>
+    <!-- ::Before, ::After 작성 -->
+    <ul class="menu">
+      <li>menu-1</li>
+      <li>menu-2</li>
+      <li>menu-3</li>
+      <li>menu-4</li>
+      <li>menu-5</li>
+    </ul>
+
+    <p>
+      콜라보헤드폰 정보
+      <a href="https://bluearchive.nexon.com">공식 사이트로 가서 정보 찾아보기?</a>
+      <!-- https://가 없으면 상대 경로로 취급되기 때문에 붙여줘야 함 -->
+    </p>
+
+    <p>
+      게헨나 메인스 기원 1일차
+      <a href="" class="dead-link">언제 나오는거지</a>
+    </p>
+  </body>
+</html>

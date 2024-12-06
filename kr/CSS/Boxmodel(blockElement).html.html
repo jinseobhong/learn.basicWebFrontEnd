@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 박스 모델의 블록 요소 -->
+    <title>Box model's block element</title>
+  </head>
+  <style>
+    /*
+			* 인라인 요소
+					- 한 줄에 여러개의 엘리멘트를 배치
+					- 기본 너비 값이 컨텐츠의 너비와 같다.
+					예) span, a, u, br, q, b, strong, img, input, textarea, ...
+			* 블록 요소
+					- 한 줄에 한 개의 요소 배치
+					- 기본 너비 값이 100% 값을 갖는다.
+					- 크기 값을 가진다.
+					예) div, table, caption, header, p, ul, ol, ...
+			*	인라인 블록 요소
+					- inline-block을 사용하면 요소가 인라인 요소처럼 같은 줄에 배치 되면서,
+					블록 요소처럼 너비와 높이의 지정이 가능하다.
+		*/
+    div {
+      border: 1px solid blue;
+      height: 100px;
+    }
+    #div1 {
+      background-color: red;
+    }
+    #div2 {
+      background-color: yellow;
+    }
+    #div3 {
+      background-color: green;
+    }
+  </style>
+  <body>
+    <div id="div1">1</div>
+    <div id="div2">2</div>
+    <div id="div3">3</div>
+  </body>
+</html>

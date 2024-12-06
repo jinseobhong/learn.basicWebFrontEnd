@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 부모 요소와 자식 요소 간의 마진 중첩 해결 -->
+    <title>Resolving margin overlap between parent and child elements</title>
+    <style>
+      .parent {
+        /*  해결 방법
+            - 두 마진 사이에 어떠한 표시할 내용을 추가
+            - 숨겨진 요소도 가능
+            border : 1px solid black;
+            padding : 1px;
+            overflow: hidden;
+        */
+        margin: 100px;
+      }
+      .child {
+        margin-top: 50px;
+        background-color: powderblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="child">Hello world!</div>
+    </div>
+  </body>
+</html>

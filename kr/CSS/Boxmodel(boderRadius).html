@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Box model 모서리 꾸미기(border-radius) -->
+    <title>Box Model(border-radius)</title>
+    <style>
+      div {
+        border: 2px solid black;
+        width: 200px;
+        height: 200px;
+        float: left;
+      }
+      .box1 {
+        border-radius: 50px;
+      }
+      .box2 {
+        border-radius: 25%;
+      }
+      .box3 {
+        /* 좌측 상단부터 시계 방향으로 설정 */
+        border-radius: 5px 10px 20px 30px;
+      }
+      .box4 {
+        /* 좌측 상단, 우측 하단(↘) 적용 & 우측 상단, 좌측 하단(↙) 적용 */
+        border-radius: 10px 30px;
+      }
+      .box5 {
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 박스 모델의 float-clear 속성 -->
+    <title>Box model's float-clear 속성</title>
+    <style>
+      .container {
+        border: 5px solid red;
+        width: 600px;
+      }
+      .top {
+        background-color: purple;
+        height: 50px;
+      }
+      .left {
+        background-color: skyblue;
+        float: left;
+        width: 400px;
+        height: 100px;
+      }
+      .right {
+        background-color: orange;
+        float: right;
+        width: 200px;
+        height: 100px;
+      }
+      .clear {
+        background-color: green;
+        height: 50px;
+        clear: both;
+      }
+      .clearfix::after {
+        content: '';
+        display: inline;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container clearfix">
+      <div class="top">float none</div>
+      <div class="left">float left 왼쪽으로 부유된 요소</div>
+      <div class="right">float right 오른쪽으로 부유된 요소</div>
+      <div class="clear">float clean 이 요소는 두 부유된 요소 아래로 내려감</div>
+    </div>
+  </body>
+</html>

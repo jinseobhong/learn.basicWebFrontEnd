@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Margin 중첩 해결 -->
+    <title>Box model's margin collapsing troubleshooting</title>
+    <style>
+      .box1 {
+        background-color: lightblue;
+        margin-bottom: 50px;
+        height: 100px;
+      }
+      .box2 {
+        background-color: lightgreen;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        height: 100px;
+      }
+      .box3 {
+        background-color: lightcoral;
+        margin-top: 20px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">Box 1</div>
+    <!-- style에 overflow: hidden 추가 -->
+    <div class="solution" style="overflow: hidden"></div>
+    <div class="box2">Box 2</div>
+    <!-- style에 overflow: auto 추가 -->
+    <div class="solution" style="overflow: auto"></div>
+    <div class="box3">Box 3</div>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>복합 선택자</title>
+    <style>
+      /* 자손 선택자 */
+      div > p:first-child {
+        font-weight: bold;
+        /* p:last-child() 등등 있음. 끝에 괄호가 있는 경우는 함수를 지정, 짝/홀수 등으로 설정할 수 있음 */
+      }
+      /* 인접 요소 선택자 */
+      /* A + B는 A 바로 뒤 에 위치한 B에게만 스타일을 적용한단 의미 */
+      div p + p {
+        color: blue;
+      }
+      /* div 안에 들어있는 p태그의 바로 뒤 형제 요소인
+		div에만 스타일이 적용되게 하는 것
+		*/
+      div p + div {
+        color: green;
+        font-weight: bold;
+      }
+
+      /* 특정 후손의 자손 선택자 */
+      div p:nth-child(3) {
+        text-decoration: underline;
+      }
+
+      .element ~ .siblings {
+        text-decoration: line-through;
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>복합 선택자 예제</h2>
+    <!-- div>p*2+div>p -->
+    <div>
+      <p>첫 번째 문장</p>
+      <p>두 번째 문장</p>
+      <p>세 번째 문장</p>
+      <div>인접형제</div>
+      <div>p와 인접하지 않은 형제(div의 인접형제)</div>
+      <p class="element">네 번째 문장</p>
+      <p class="siblings">클래스 이름이 element인 일반 형제들이면서 해당 클래스를 가리키고 있어야 함</p>
+      <p class="different-class-name">클래스 이름이 element인 일반 형제들이면서 해당 클래스를 가리키고 있어야 함</p>
+      <p class="siblings">클래스 이름이 element인 일반 형제들이면서 해당 클래스를 가리키고 있어야 함</p>
+    </div>
+  </body>
+</html>
