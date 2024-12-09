@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 박스 모델의 Position -->
+    <title>Position Practice</title>
+    <style>
+      /*
+				position 속성
+					- absolute : 절대 위치에서 배치하기
+					- relative : 부모 요소 기준으로 배치하기
+					- fixed : 브라우저 창 내 화면에 고정하기
+					- sticky : 스크롤 시 고정하기
+			*/
+      body {
+        height: 10000px;
+        border: 1px solid red;
+      }
+      .container {
+        width: 300px;
+        height: 300px;
+        background-color: gray;
+      }
+      /* absolute : 요소의 절대 위치 배치 */
+      .absolute {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        background-color: lightcoral;
+      }
+      /* relative : 부모요소 기준으로 위치 배치 */
+      .relative {
+        position: relative;
+        top: 20px;
+        left: 20px;
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+      }
+      /* fixed */
+      .fixed {
+        position: fixed;
+        bottom: 0px;
+        width: 100px;
+        height: 100px;
+        background-color: lightblue;
+      }
+      /* sticky */
+      .sticky {
+        position: sticky;
+        top: 30px;
+        background-color: lightgreen;
+        width: 100%;
+        height: 50px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="relative">Relative Position</div>
+    <div class="container">
+			<div class="absolute">Absolute Position</div>
+		</div>
+    <div class="fixed">Fixed Position</div>
+    <div class="sticky">Sticky Position</div>
+  </body>
+</html>

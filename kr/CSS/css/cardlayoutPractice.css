@@ -1,0 +1,48 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #f0f0f0;
+}
+header {
+  background-color: #4caf50;
+}
+header h1 {
+  margin: 0px;
+  font-size: large;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+.card-container {
+  margin-top: 10px;
+}
+.card {
+  float: left;
+  width: 30%;
+  margin: 1%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.card h2 {
+  font-size: medium;
+  text-align: left;
+  padding: 5px;
+}
+.card p {
+  font-size: small;
+  padding: 5px;
+}
+footer {
+  position: fixed;
+  bottom: 0px;
+  background-color: #333;
+  width: 100%;
+}
+footer p {
+  font-size: smaller;
+  text-align: center;
+  color: white;
+  padding: 10px;
+}
