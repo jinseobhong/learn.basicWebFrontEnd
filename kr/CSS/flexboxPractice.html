@@ -5,21 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flexbox Practice 2</title>
     <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
       header {
         display: flex;
-        flex-flow: row;
-        justify-content: flex-start;
+        justify-content: space-between;
         align-items: center;
-        color: white;
         background-color: black;
+        color: white;
+        padding: 1% 2%;
       }
-      header > .logo {
-        padding: 0;
-        margin-left: 1%;
+      .main-container {
+        display: flex;
+        flex-direction: row;
+        padding: 1%;
+        margin: 1%;
+        min-height: 75vh;
       }
-      header > nav {
-        padding: 1% 0;
-        margin-left: 70%;
+      .main-container > .sidebar {
+        background-color: lightgreen;
+        width: 40%;
+        padding: 1%;
+      }
+      .main-container > .content {
+        background: lightgray;
+        padding: 1%;
+      }
+      footer {
+        position: fixed;
+        bottom: 0;
+        background-color: lightblue;
+        width: 100%;
+        text-align: center;
       }
     </style>
   </head>
