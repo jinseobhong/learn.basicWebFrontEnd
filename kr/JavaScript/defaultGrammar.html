@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // 변수(variable)
+    /*
+      var, let, const(상수)
+        - 데이터 타입에 상관 없이 데이터를 입력할 때 변수 앞에 명시
+    */
+    /*
+      var
+        - 데이터의 재할당 가능
+      let
+        - 데이터의 재할당 불가능
+      const
+        - 메모리에 상수로 고정되는 값
+        - 데이터의 재할당 불가능
+    */
+    var a;
+    let b;
+    b = 10;
+    const c = 3.14;
+    const d = true;
+    console.log(b);
+    console.log(c);
+    console.log(d);
+    /*
+      * 데이터 타입
+        - Number
+        - String
+        - Undefined
+        - Null
+        - Boolean
+        - Object
+    */
+    /*
+      Number
+        - 숫자
+        - Nan : Not a Number
+    */
+    let point = 990;
+    console.log(point);
+    // 해당 값의 데이터 타입을 확인
+    console.log(typeof point);
+    /*
+      String
+        - 문자열
+    */
+    let str = '문자열1';
+    let str2 = '문자열22' + str;
+    let str3 = `문자열333 ${str2}`;
+    console.log(str);
+    console.log(str2);
+    console.log(str3);
+    console.log(typeof str);
+    console.log(typeof str2);
+    console.log(typeof str3);
+    /*  Undefiend
+          - 값이 초기화되지 않은 변수를 출력할 경우
+    */
+    let e;
+    console.log(e);
+    /* Null
+        - "참조할 값이 없는 상태"
+        - 변수나 객체 속성이 참조할 값이 없음을 명시적으로 나타낼 때 사용
+    */
+    // undefined vs null
+    /*
+      == 연산자 : 두 값이 같은 지를 비교
+      === 연산자 : 두 값과 데이터 타입이 모두 같은 지를 비교
+    */
+    console.log(undefined == null);
+    console.log(undefined === null);
+    console.log(typeof undefined);
+    console.log(typeof null);
+    /*
+      Boolean
+        - 참과 거짓(true, false)
+    */
+    console.log(1 == 1);
+    console.log(1 != 1);
+    /*
+      Object
+        - { key : value } 의 형태
+    */
+    let book = {
+      title: '책',
+      author: '다자이 오사무',
+      maxPage: 984,
+    };
+    console.log(book);
+    console.log(book.title);
+    console.log(typeof book.title);
+    console.log(typeof book.maxPage);
+  </script>
+</head>
+<body>
+</body>
+</html>
