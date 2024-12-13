@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array</title>
+  <script>
+    /*
+      * 배열(Array)
+        - Javascript의 배열은 순서가 있는 값들의 집합을 저장하는 변수
+        - 배열은 다양한 데이터 타입의 값을 포함할 수 있으며, 각 값은 인덱스로 접근 가능
+    */
+    const fruits = ['Apple','Banana','Durian'];
+    // 배열의 요소 접근
+    console.log(fruits[0]);
+    console.log(fruits[1]);
+    console.log(fruits[2]);
+    // 배열의 요소 재할당
+    fruits[2] = 'mandarin';
+    console.log(fruits[2]);
+    console.log(fruits);
+    // 배열 길이
+    console.log(fruits.length);
+    /*
+      배열 끝에 요소 할당(push)
+        - push method는 배열의 끝에 하나 이상의 요소를 추가
+    */
+    fruits.push('grape','pineapple');
+    console.log(fruits);
+    /*
+      배열 중간에 요소 추가(splice)
+    */
+    console.log("splicePractice.splice");
+    const splicePractice = [1, 2, 4, 5];
+    splicePractice.splice(2,0,'3-1', '3-2','3-3');
+    console.log(splicePractice);
+    /*
+      배열 끝에서 요소 제거(pop)
+        - pop method는 배열의 끝에서 요소를 제거하고, 제거된 요소를 반환
+      */
+    let lastFruit = fruits.pop();
+    console.log(lastFruit);
+    console.log(fruits);
+    /*
+      배열 합차기(concat)
+    */
+    const vegetables = ['Cabbage','Carrot'];
+    const food = fruits.concat(vegetables);
+    console.log(food);
+    /*
+      배열 정렬(sort)
+    */
+    food.sort();
+    console.log(food);
+    /*
+      배열 요소 순서 뒤 집기(reverse)
+    */
+    food.reverse();
+    console.log(food);
+    /*
+      2차원 배열
+    */
+    let lang = ['Java','DB',['HTML','CSS','Javascript']];
+    console.log(lang[0]);
+    console.log(lang[2][0]);
+
+    for(const subject of lang[2]) {
+      console.log(subject);
+    }
+    /*
+      배열과 함께 익명 함수가 작동하는 for문의 문법 확인
+    */
+    for (let index = 0; index < lang.length; index++) {
+      // 주어진 값이 배열인지 확인하는 메서드
+      if(Array.isArray(lang[index])) {
+        lang[index].forEach((element, subIndex,subArray)=> {
+          console.log(element, subIndex, subArray);
+        });
+      } else {
+        console.log(lang[index]);
+      }
+    }
+    </script>
+</head>
+<body>
+</body>
+</html>

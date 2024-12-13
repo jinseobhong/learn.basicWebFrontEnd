@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>String</title>
+  <script>
+    /*
+      length
+        - 문자열의 길이 값을 양의 정수로 반환
+      변수.valueOf()
+        - 해당 변수의 값을 반환
+      toString()
+        - 문자열로 변환
+      charAt(index)
+        - index 번쨰의 문자를 반환
+      indexOf(String)
+        - 일치하는 문자 중 가장 작은 인덱스의 값을 반환
+      concat()
+        - 문자열 합치기
+      toUpperCase()
+        - 영문 소문자를 대문자로 변환
+      toLowerCase()
+        - 영문 대문자를 소문자로 변환
+      trim()
+        - 문자열 앞 뒤 공백 제거
+      substring()
+        - 인덱스 시작부터 끝 인덱스 바로 앞까지 값을 반환(부분 문자열 추출)
+      replace()
+        - 매치된 결과를 지정한 값으로 대체
+    */
+    const str = 'Default String'
+    // String.length
+    console.log("String.length");
+    console.log(str.length);
+    const numStr = '9';
+    const booleanStr = 'true';
+    const booleanSte2 = true;
+    // String.valueOf()
+    console.log("String.valueof()")
+    console.log(numStr.valueOf());
+    console.log(booleanStr.valueOf());
+    // String.toString()
+    console.log("String.toString()")
+    console.log(booleanSte2.toString());
+    console.log(typeof booleanSte2.toString());
+    // String.charAt(index)
+    console.log("String.chatAt()")
+    console.log(str.charAt(3));
+    // String.indexOf(String)
+    console.log("String.indexOf()")
+    console.log(str.indexOf('D'));
+     // String.lastIndexOf(String)
+    console.log("String.lastIndexOf()")
+    console.log(str.lastIndexOf('D'));
+    // String.concat()
+    console.log(str.concat(' ',...str));
+    // String.toUpperCase()
+    console.log(str.toUpperCase());
+     // String.toLowerCase()
+    console.log(str.toLowerCase());
+    // String.trim()
+    console.log(str.trim());
+</script>
+</head>
+<body></body>
+</html>

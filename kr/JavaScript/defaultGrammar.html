@@ -12,12 +12,15 @@
     */
     /*
       var
+        - 사용 지향
         - 데이터의 재할당 가능
       let
-        - 데이터의 재할당 불가능
+        - 데이터의 재할당 가능
+        - 재선언 불가
       const
         - 메모리에 상수로 고정되는 값
         - 데이터의 재할당 불가능
+        - 재선언 불가
     */
     var a;
     let b;
@@ -58,7 +61,7 @@
     console.log(typeof str);
     console.log(typeof str2);
     console.log(typeof str3);
-    /*  Undefiend
+    /*  Undefined
           - 값이 초기화되지 않은 변수를 출력할 경우
     */
     let e;

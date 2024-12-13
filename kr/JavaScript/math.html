@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math</title>
+</head>
+<script>
+  /* Math */
+  console.log(`원주율: ${Math.PI}`);
+  console.log(`오일러 상수: ${Math.E}`);
+  // abs() → 절대 값
+  console.log(`abs(): ${Math.abs(-3)}`);
+  console.log(`abs(): ${Math.abs('-2')}`);
+  console.log(`abs(): ${Math.abs('Korea')}`);
+  console.log(`abs(): ${Math.abs(null)}`);
+  console.log(`abs(): ${Math.abs(undefined)}`);
+  console.log(`abs(): ${Math.abs()}`);
+  // ceil() → 올림
+  console.log(`ceil(): ${Math.ceil(0.95)}`); //  1
+  console.log(`ceil(): ${Math.ceil(5.00000001)}`); //  6
+  console.log(`ceil(): ${Math.ceil(-0.95)}`); // 0
+  // floor() → 내림
+  console.log(`floor(): ${Math.floor(0.95)}`); // 0
+  console.log(`floor(): ${Math.floor(5.00000001)}`); // 5
+  console.log(`floor(): ${Math.floor(-0.95)}`); // -1
+  // trunc() → 버림
+  console.log(`trunc(): ${Math.trunc(0.95)}`); // 0
+  console.log(`trunc(): ${Math.trunc(5.00000001)}`); // 5
+  console.log(`trunc(): ${Math.trunc(5)}`); // 5
+  console.log(`trunc(): ${Math.trunc(-0.95)}`); // -0
+  // round() → 반올림
+  console.log(`round(): ${Math.round(0.95)}`); // 0
+  console.log(`round(): ${Math.round(5.00000001)}`); // 5
+  // max() → 최대 값 구하기
+  console.log(`max(): ${Math.max(1,5,3)}`);
+  console.log(`max(): ${Math.max(-1,-5,-3)}`);
+  /*
+    스프레드 연산자 : 배열이나 객체를 확장하거나 복사
+  */
+  const numbers = [ 1, 2, 3, 5, 6];
+  console.log(Math.max(...numbers));
+  // min() → 최소 값 구하기
+  console.log(`min(): ${Math.min(1,5,3)}`);
+  console.log(`min(): ${Math.min(-1,-5,-3)}`);
+  // pow(및, 지수) || 및 ** 지수 → 거듭제곱(지수연산)
+  console.log(`pow(): ${Math.pow(5,2)}`);
+  console.log(5 ** 2);
+  // random() → 0~1 미만의 난수 발생
+  console.log(`random(): ${Math.random()}`);
+  for (let index = 0; index < 5; index++) {
+    // 1 <= n < 10
+    console.log(Math.trunc(Math.random()*10));
+  }
+</script>
+<body></body>
+</html>
