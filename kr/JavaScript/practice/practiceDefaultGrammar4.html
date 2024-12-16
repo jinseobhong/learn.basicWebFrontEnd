@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice Default Grammar 4</title>
+  <script>
+    /*
+      4. 계산기 만들기
+        * 입력받은 값을 저장하기 위해 변수를 준비한다.
+        * prompt로 값 하나 입력 받기 : number
+        * prompt로 값 두번째 입력 받기 : number2
+        * prompt로 연산자 입력 받기 : operator
+        * 연산의 결과를 대입하기 위한 변수 : result
+        * 입력받은 연산자에 따라 처리하기 위해 switch문을 사용한다.
+        * 입력받은 값을 숫자인 지 아닌 지 판단한다.
+        * 연산의 결과는 각 스위치 문 안에서 result 값에 대입한다.
+    */
+    let number;
+    let number2;
+    let operator;
+    let result;
+    function inputValues() {
+        number  = prompt("첫번째 값을 입력하세요.");
+        if(isNaN(number == false)) {
+          console.log("첫번째 값에 숫자를 입력해주세요.")
+        }
+        number2 = prompt("두번째 값을 입력하세요.")
+        if(isNaN(number2 == false)) {
+          console.log("두번째 값에 숫자를 입력해주세요.")
+        }
+        operator = prompt("연산자를 입력하세요(+,-,*,/)");
+        result = 0;
+    }
+    function calculate(num,num2,opt) {
+      switch (opt) {
+        case "+":
+          result = parseFloat(num)+parseFloat(num2);
+          break;
+        case "-":
+          result = parseFloat(num)-parseFloat(num2);
+          break;
+        case "*":
+          result = parseFloat(num)*parseFloat(num2);
+          break;
+        case "/":
+          result = parseFloat(num)/parseFloat(num2);
+          break;
+        default:
+          console.log("정확한 연산자를 입력해주세요.")
+          break;
+      }
+    }
+    inputValues();
+    calculate(number,number2,operator);
+    alert(result);
+  </script>
+</head>
+<body>
+</body>
+</html>

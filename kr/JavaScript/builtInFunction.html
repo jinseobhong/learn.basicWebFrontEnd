@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Built in function</title>
+  <script>
+    /* 내장 함수 */
+      // prompt에 입력 값이 없으면 null을 대입
+      // const inputFromPrompt = prompt('입력 하세요');
+      console.log(typeof inputFromPrompt);
+      /*
+        데이터 타입 변경
+          - parseInt()
+            - 문자열을 정수 Number type으로 타입 변환
+          - parseFloat()
+            - 문자열을 실수 Number type으로 타입 변환
+          - String()
+            - Number type을 String type으로 변환
+          - isNan()
+            - 변수의 type이 Number type인 지 확인하는 함수
+        */
+      console.log("Before Parsing ");
+      console.log(typeof inputFromPrompt);
+      console.log("After Parsing ");
+      //  parseInt()
+      console.log(typeof parseInt(inputFromPrompt));
+      // parseFloat()
+      console.log(typeof parseFloat(inputFromPrompt));
+      // String()
+      console.log(typeof String(inputFromPrompt));
+      // isNan()
+      console.log(isNan('숫자가 아님')); // 숫자가 아니면 true를 반환
+  </script>
+</head>
+<body>
+</body>
+</html>

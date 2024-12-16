@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice Default Grammar 3</title>
+  <script>
+    // 3. 조건문 활용과 prompt() 사용
+    /*
+      * 입력을 받을 변수를 준비한다.(userInput)
+      * 결과값을 저장할 변수를 준비한다.
+      * 분기를 나눈다(if문을 사용)
+      * 조건은 입력받은 값이 빈 문자열임을 확인하도록 한다.
+      * 출력문은 템플릿 문자열로 작성한다 ${userInput}
+    */
+    let str = '';
+    const userInput = prompt('이름을 입력해 주세요');
+    if(userInput !== '' && userInput !== null) {
+      str = `입력한 이름은 ${userInput}입니다.`;
+    } else {
+      str = '입력이 취소 되었습니다.';
+    }
+    console.log(str);
+  </script>
+</head>
+<body>
+</body>
+</html>
