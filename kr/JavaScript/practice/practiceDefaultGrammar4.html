@@ -20,31 +20,40 @@
     let number2;
     let operator;
     let result;
+    function getInputValue(message) {
+      let input = prompt(message);
+      return Number.parseFloat(input);
+    }
+    function invalidValue(value,message) {
+      if(value === null) {
+        return;
+      }
+      if(Number.isNaN(value) == true) {
+          console.log(message);
+        }
+    }
+
     function inputValues() {
-        number  = prompt("첫번째 값을 입력하세요.");
-        if(isNaN(number == false)) {
-          console.log("첫번째 값에 숫자를 입력해주세요.")
-        }
-        number2 = prompt("두번째 값을 입력하세요.")
-        if(isNaN(number2 == false)) {
-          console.log("두번째 값에 숫자를 입력해주세요.")
-        }
-        operator = prompt("연산자를 입력하세요(+,-,*,/)");
-        result = 0;
+      number = getInputValue("첫번째 값을 입력하세요.");
+      invalidValue(number,"숫자 값을 입력하세요.");
+      number2 = getInputValue("두번째 값을 입력하세요.");
+      invalidValue(number2,"숫자 값을 입력하세요.");
+      operator = prompt("연산자를 입력하세요(+,-,*,/)");
+      result = 0;
     }
     function calculate(num,num2,opt) {
       switch (opt) {
         case "+":
-          result = parseFloat(num)+parseFloat(num2);
+          result = num+num2;
           break;
         case "-":
-          result = parseFloat(num)-parseFloat(num2);
+          result = num-num2;
           break;
         case "*":
-          result = parseFloat(num)*parseFloat(num2);
+          result = num*num2;
           break;
         case "/":
-          result = parseFloat(num)/parseFloat(num2);
+          result = num/num2;
           break;
         default:
           console.log("정확한 연산자를 입력해주세요.")
@@ -52,8 +61,8 @@
       }
     }
     inputValues();
-    calculate(number,number2,operator);
-    alert(result);
+    calculate(number,number2,operator,result);
+    alert(`${number}${operator}${number2}=${result}`);
   </script>
 </head>
 <body>

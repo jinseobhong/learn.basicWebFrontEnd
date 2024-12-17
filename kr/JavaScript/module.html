@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module</title>
+  <script type="module">
+  /*
+      모듈화
+        - 시스템이 프로그램을 독립적이고 재사용 가능한 단위(모듈)로 나누는 과정
+        하나의 특정 기능을 담당하도록 한다.
+
+        1. 모듈 정의(export)
+          - 모듈로 정의하고자 하는 함수 혹은 표현식에 export 예약어를 붙인다.
+        2. 모듈을 가져오기(import)
+          - import [default로 export한 함수 이름], {[가져올 함수 이름 OR 변수 이름]} from [스크립트 경로];
+        3. 모듈을 사용하는 스크립트 작성
+          - 모듈 스크립트 (import 구문을 사용하는 스크립트)를 사용하려면
+            <script> 태그에 type="module" 속성을 추가한다.
+    */
+    // named import: math.js에서 함수와 변수를 불러오기
+    import { add, subtract, PI } from './js/math.js';
+
+    // default import: greeting.js에서 기본으로 내보낸 함수 불러오기
+    import greet from './js/greeting.js';
+
+    console.log(greet("John")); // Hello, John!
+
+    console.log("Add: ", add(5, 3)); // Add: 8
+    console.log("Subtract: ", subtract(5, 3)); // Subtract: 2
+    console.log("PI: ", PI); // PI: 3.14159
+</script>
+</head>
+<body></body>
+</html>

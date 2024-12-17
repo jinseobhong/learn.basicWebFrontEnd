@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON</title>
+  <script>
+    /*
+      JSON(JavaScript Object Notation)
+        - Javascript의 객체 표기법을 기반으로 데이터 교환 형식
+        - 웹 어플리케이션에서 서버와 클라이어트 간의 데이터를 교환하는 데 자주 사용
+    */
+    // 문자열을 JSON 형식으로 작성하고 그 문자열을 JSON 객체로 변환
+    let jsonString = '{"id":"hong","title":"홍길동전"}';
+    console.log(jsonString)
+    console.log("문자열을 JSON 객체로 변환");
+    const parsedStr = JSON.parse(jsonString);
+    console.log(typeof parsedStr);
+    console.log(parsedStr.id);
+    console.log(parsedStr.title);
+    /*
+      JSON 형식 규칙
+        - 키(Key)는 반드시 큰따옴표로 감싸진 문자열이여야 한다.
+        - 값(Value)는 문자열, 숫자, 참과거짓, 배열 객체, null이 들어갈 수 있다.
+          - 함수나 undefined는 들어갈 수 없다.
+    */
+    // 객체를 JSON 문자열로 변환
+    const person = {
+      name:'김학생',
+      age: 30,
+      isStudent : false,
+      courses: ['IT','Japanese'],
+      address:{
+        street:'충장대로 11',
+        state:'중구',
+        city:'부산시',
+      },
+    };
+    console.log("객체를 JSON 문자열로 변환");
+    jsonString = JSON.stringify(person);
+    console.log(jsonString);
+    console.log(typeof jsonString);
+    // 수신 입장
+    const jsonString2 = '{"name":"김학생","age":30,"isStudent":false,"courses":["IT","Japanese"],"address":{"street":"충장대로 11","state":"중구","city":"부산시"}}';
+    const person2 = JSON.parse(jsonString2);
+    console.log(person2);
+    console.log(typeof person2)
+    console.log(person2.name);
+    console.log(person2.age);
+    console.log(person2.isStudent);
+    console.log(person2.courses[0]);
+    console.log(person2.address.city);
+    </script>
+</head>
+<body>
+  <div class="contents"></div>
+</body>
+</html>
