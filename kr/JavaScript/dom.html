@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Object Model</title>
+  <script>
+    /*
+      파싱(Parsing)
+        - 구문 분석, 프로그래밍 언어의 문법에 맞게 적합한 텍스트 문서를 읽어 들이고,
+        문자열을 분해하고 재생성 하는 과정(데이터의 재구성)
+    */
+    /*
+      렌더링에 의한 스크립트 실행이 방해되지 않는 방법
+        - script Tag에 defer 속성 추가
+          - javascript file의 불러오기가 비동기적으로 동시에 진행된다는 점은 async와 같은
+            스크립트의 실행 자체는 DOM을 완전히 불러온 후 실행
+        - DOMcontentLoaded 이벤트 사용
+          - document.addEventListener('DOMContentLoaded,function(){
+            Code ...
+            }
+          ')
+          - HTML을 불러오고 구문 분석이 완료 되면 실행
+        - window.onload 이벤트 사용
+          - window.onload = function() {
+            Code ...
+          };
+          - 웹 페이지의 모든 자원을 불러온 후 실행
+        - script Tag를 body Tag 아래에 위치 시킨다.
+      - DOM {Document Object Model}
+        - 문서 객체 모델
+          - document의 구조를 설명하는 아키텍처
+          - 웹 페이지에서의 객체 지향 표현
+          - 웹 페이지 내의 요소에 접근할 수 있도록 고안된 개념, 인터페이스
+      - HTML 요소 찾기
+        - id
+          - id 속성으로 요소 찾기
+          - document.getElementById('id');
+        - tag
+          - tag 속성으로 요소 찾기
+          document.getElementsByTagName('tag');
+        - class
+          - class 속성으로 요소 찾기
+          - document.getElementsByClassName('class');
+        - name
+          - name 속성으로 요소 찾기
+          - document.getElementsByName('name');
+        - 선택자 통해 단일의 요소 찾기
+          - document.querySelector('selector');
+        - 선택자 통해 다수의 요소 찾기
+          - document.querySelectorAll('selector');
+      - HTML 요소가 존재하는 지 확인
+          - 가져온 요소의 변수.matches('selector');
+            - Boolean 값을 반환
+      */
+      // DOMcontentLoaded 이벤트 사용
+      document.addEventListener('DOMContentLoaded', () => {
+        /*
+          HTML 요소 찾기
+            - id
+              - id 속성으로 요소 찾기
+              - document.getElementById('id');
+        */
+        const demo = document.getElementById('demo');
+        console.log(demo);
+        /*  - tag
+              - tag 속성으로 요소 찾기
+              - document.getElementsByTagName('tag');
+        */
+        const pTags = document.getElementsByTagName('p');
+        console.log(pTags);
+        /*
+            - class
+              - class 속성으로 요소 찾기
+              - document.getElementsByClassName('class');
+        */
+        const demoClass = document.getElementsByClassName('demo');
+        console.log(demoClass);
+        /*  - name
+              - name 속성으로 요소 찾기
+              - document.getElementsByName('name');
+        */
+        const selectedName = document.getElementsByName('name');
+        console.log(selectedName);
+        /*
+          선택자 통해 단일의 요소 찾기
+            - document.querySelector('selector');
+        */
+        const selectedDemo = document.querySelector('#demo');
+        console.log(selectedDemo);
+        const selectedchildren = document.querySelector('div>#children');
+        console.log(selectedchildren);
+        /*
+          선택자 통해 다수의 요소 찾기
+            - document.querySelectorAll('selector');
+        */
+        const selectedDemos = document.querySelectorAll('.demo');
+        console.log(selectedDemos);
+        /*
+        HTML 요소가 존재하는 지 확인
+          - 가져온 요소의 변수.matches('selector');
+            - Boolean 값을 반환
+        */
+        console.log(demo.matches('#demo'));
+      });
+      // window.onload 이벤트 사용
+      window.onload = () => {
+      };
+  </script>
+</head>
+<body>
+  <p id="demo">안녕하세요</p>
+  <p class="demo">안녕하세요</p>
+  <p class="demo">안녕하세요</p>
+  <div>
+    <div id="children">선택자 여러개 선택해보기</div>
+  </div>
+</body>
+</html>

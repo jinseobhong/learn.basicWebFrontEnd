@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM example</title>
+  <script>
+    /*
+      - HTML 요소 변경 하기
+        - 요소 내의 컨텐츠 변경
+          - 가져온 element.innerHTML = HTML 컨텐츠
+        - 요소가 가진 속성
+          - 가져온 element.[속성의 이름] = 변경할 속성 값
+        - 요소의 스타일
+          - 가져온 element.style.[css의 속성 이름] = 변경할 속성의 값
+        - 속성의 추가
+          - element.setAttribute('속성의 이름', 속성의 값)
+        - 속성의 값을 반환
+          - element.getAttribute('속성의 이름')
+    */
+    window.onload = () => {
+      // HTML 컨텐츠의 변경
+      const pTag = document.getElementsByTagName('p');
+      pTag[0].innerHTML = '안녕하세요</br> 홍이현입니다';
+      // 속성 변경
+      const inputTags = document.getElementsByTagName('input');
+      inputTags[0].type = 'password';
+      // 스타일의 변경
+      const button = document.querySelector('#button');
+      const bodyTag = document.querySelector('body');
+      const colors = ['lightpink','lightblue'];
+      // 속성의 추가
+      inputTags[0].setAttribute('class','input');
+      // 속성의 값을 반환
+      console.log(inputTags[0].getAttribute('class'));
+      let i = 0;
+      button.addEventListener('click', () => {
+        if(i >= colors.length){
+          i = 0;
+        }
+        bodyTag.style.backgroundColor = colors[i];
+        i++;
+      })
+    };
+  </script>
+</head>
+<body>
+  <p>Hello world!</p>
+  <button id="button">배경색 변경</button>
+  <input type="text" name="name" id="name" value="홍길동">
+</body>
+</html>

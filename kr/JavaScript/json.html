@@ -40,7 +40,7 @@
     jsonString = JSON.stringify(person);
     console.log(jsonString);
     console.log(typeof jsonString);
-    // 수신 입장
+    // 수신자 입장에서 요청받은 JSON
     const jsonString2 = '{"name":"김학생","age":30,"isStudent":false,"courses":["IT","Japanese"],"address":{"street":"충장대로 11","state":"중구","city":"부산시"}}';
     const person2 = JSON.parse(jsonString2);
     console.log(person2);
@@ -53,6 +53,5 @@
     </script>
 </head>
 <body>
-  <div class="contents"></div>
 </body>
 </html>
