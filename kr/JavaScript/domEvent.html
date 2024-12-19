@@ -1,54 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DOM Event</title>
-  <script>
-    /*
-      이벤트(Event)란?
-        - DOM의 일부
-        - 사용자와 웹 페이지 사이의 상호작용을 다룰 수 있도록 만들어진 기능.
-        - 브라우저가 제공하는 이벤트 시스템의 일부
-        - 상태변화나 행동을 나타내는 신호
-        - 이벤트는 이벤트 객체와 함께 작동한다.
-        - 이벤트는 DOM트리와 연결된 개념이다.
-        - 이벤트는 리스너를 통해 처리된다.
-        - 이벤트를 감지하면 브라우저가 자동으로 콜백 함수를 실행 한다.
-    */
-    /*
-      Event handler를 추가하는 방식
-        - HTML 인라인 이벤트 핸들러
-          - 빠르지만 유지 보수 어려움
-        - DOM 요소의 프로퍼티에 Event handler를 할당
-          - 간단하지만 하나의 핸들러만 설정 가능
-        - addEventListener 함수를 사용
-          - 가장 많이 사용되는 표준 방식
-    */
-    // onchange
-    const upperCase = (element) => {
-      element.value = element.value.toUpperCase();
-    }
-    // onfocus & onfocusOut
-    const changeBackgroundColor = (element,color) => {
-      element.style.backgroundColor = color;
-    }
-    // onclick
-    const initial = (element) => {
-      element.value = '';
-    }
-    // onmouseover & onmouseout
-    const changeColor = (element,color) => {
-      element.style.color = color;
-    }
-</script>
-</head>
-<body>
-  <p>이름 입력</p>
-  <input type="text" name="inputName" id="inputName" onchange="upperCase(this)" onfocus="changeBackgroundColor(this,'red')" onfocusOut="changeBackgroundColor(this,'white')">
-  <button type="button" onclick="initial(document.getElementById('inputName'))">초기화</button>
-  <br>
-  <p>마우스</p>
-  <div id="mouse" onmouseover="changeColor(this,'blue')" onmouseout="changeColor(this,'black')">마우스를 올려보세요</div>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Event</title>
+    <script>
+      /*
+        이벤트(Event)란?
+          - DOM의 일부
+          - 사용자와 웹 페이지 사이의 상호작용을 다룰 수 있도록 만들어진 기능.
+          - 브라우저가 제공하는 이벤트 시스템의 일부
+          - 상태변화나 행동을 나타내는 신호
+          - 이벤트는 이벤트 객체와 함께 작동한다.
+          - 이벤트는 DOM트리와 연결된 개념이다.
+          - 이벤트는 리스너를 통해 처리된다.
+          - 이벤트를 감지하면 브라우저가 자동으로 콜백 함수를 실행 한다.
+      */
+      /*
+        Event handler를 추가하는 방식
+          - HTML 인라인 이벤트 핸들러
+            - 빠르지만 유지 보수 어려움
+          - DOM 요소의 프로퍼티에 Event handler를 할당
+            - 간단하지만 하나의 핸들러만 설정 가능
+          - addEventListener 함수를 사용
+            - 가장 많이 사용되는 표준 방식
+      */
+    </script>
+  </head>
+  <body>
+    <!-- HTML 인라인 이벤트 핸들러 -->
+    <input type="text" name="inputText" id="inputText" onchange="upperCase(this)" onfocus="changeBackgroundColor(this,'red')" onfocusOut="changeBackgroundColor(this,'white')">
+    <button type="button" onclick="initialText(document.getElementById('inputText'))">초기화</button>
+    <br>
+    <div id="mouse" onmouseover="changeColor(this,'blue')" onmouseout="changeColor(this,'black')">마우스를 올려보세요</div>
+    <br>
+    <img src="./images/facebook.png" alt="">
+    <button type="button" onclick="changeImage(document.getElementsByTagName('img')[0])">이미지 변경</button>
+    <!-- DOM 요소의 프로퍼티에 Event handler를 할당 -->
+    <button id="myButton">myButton</button>
+    <!-- addEventListener 함수를 사용 -->
+    <button id="myButton2">myButton2</button>
+    <script>
+      /*
+        HTML 인라인 이벤트 핸들러
+      */
+      // onchange
+      const upperCase = (element) => {
+        element.value = element.value.toUpperCase();
+      }
+      // onfocus & onfocusOut
+      const changeBackgroundColor = (element,color) => {
+        element.style.backgroundColor = color;
+      }
+      // onclick
+      const initialText = (element) => {
+        element.value = '';
+      }
+      // onmouseover & onmouseout
+      const changeColor = (element,color) => {
+        element.style.color = color;
+      }
+      let currentIndex  = 0;
+      const changeImage = (element) => {
+      const images = ['./images/facebook.png','./images/pinterest.png','./images/twitter.png'];
+      currentIndex = (currentIndex + 1) % images.length;
+      element.src=images[currentIndex];
+      }
+      /*
+        DOM 요소의 프로퍼티에 Event handler를 할당
+      */
+      const myButton = document.querySelector('#myButton');
+      myButton.onclick = () => {
+        changeImage(document.getElementsByTagName('img')[0]);
+      }
+      /*
+        addEventListener 함수를 사용
+      */
+      const myButton2 = document.querySelector('#myButton2');
+      myButton2.addEventListener("click", () => {
+        changeImage(document.querySelector('img'));
+      });
+      /*
+        EventListener 제거
+          - 제거 시 정확히 동일한 함수를 전달할
+          - 익명 함수 사용 시 제거 불가능(참조 불가)
+      */
+    </script>
+  </body>
 </html>
